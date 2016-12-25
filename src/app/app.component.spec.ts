@@ -18,13 +18,4 @@ describe('AppComponent', function () {
 	}));
 	
 	it('should create component', () => expect(component).toBeDefined());
-	
-	it('should test reporter', () => {
-		expect(true).toBe(true);
-	});
-	
-	xit('should test reporter 2', () => {
-		
-		expect(true).toBe(true);
-	});
 });

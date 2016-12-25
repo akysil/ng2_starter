@@ -3,5 +3,5 @@ module.exports = {
     suppressSkipped: false,
     suppressFailed: false,
     suppressErrorSummary: true,
-    maxLogLines: 2
+    maxLogLines: 1
 };
