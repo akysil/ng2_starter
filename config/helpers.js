@@ -5,7 +5,7 @@ var _root = path.resolve(__dirname, '..');
 
 /** @function
  * @name root
- * @param {string[]} args is array of directories names, will be used for path generation
+ * @param {string} args is array of directories names, will be used for path generation
  * @returns {string} generated path */
 
 function root(...args) {

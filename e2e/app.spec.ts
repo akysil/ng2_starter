@@ -6,7 +6,7 @@ describe('Demo App', function () {
 		browser.get('/');
 	});
 	
-	it('should have a header', function () {
+	it('should have a header /Hello World!/', function () {
 		expect(element(by.tagName('h1')).getText()).toEqual('Hello World!');
 	});
 });

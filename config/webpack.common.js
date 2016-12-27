@@ -6,7 +6,7 @@ var helpers = require('./helpers');
 module.exports = {
     entry: {
         'polyfills': './src/polyfills.ts',
-        'vendor': './src/vendor.ts',
+        'vendors': './src/vendors.ts',
         'app': './src/main.ts'
     },
     
@@ -60,7 +60,7 @@ module.exports = {
     plugins: [
         // separate the code by chunks, removes duplicated code
         new webpack.optimize.CommonsChunkPlugin({
-            name: ['app', 'vendor', 'polyfills']
+            name: ['app', 'vendors', 'polyfills']
         }),
         
         // inject scripts and styles in html

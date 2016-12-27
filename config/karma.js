@@ -1,5 +1,5 @@
 var webpackConfig = require('./webpack.test');
-var karmaSimpleReporterConfig = require('./karma-simple-reporter');
+var karmaSpecReporterConfig = require('./karma-spec-reporter');
 
 module.exports = function(config) {
     var _config = {
@@ -9,13 +9,13 @@ module.exports = function(config) {
         
         files: [
             {
-                pattern: './karma-test-shim.js',
+                pattern: './karma-shim.js',
                 watched: false
             }
         ],
         
         preprocessors: {
-            './karma-test-shim.js': ['webpack', 'sourcemap']
+            './karma-shim.js': ['coverage', 'webpack', 'sourcemap']
         },
         
         webpack: webpackConfig,
@@ -29,14 +29,22 @@ module.exports = function(config) {
             stats: true
         },
         
-        reporters: ['karmaSimpleReporter'],
-        specReporter: karmaSimpleReporterConfig,
+        reporters: ['karmaSimpleReporter', 'coverage', 'remap-coverage'],
+        specReporter: karmaSpecReporterConfig,
+        coverageReporter: {
+            type: 'in-memory'
+        },
+        remapCoverageReporter: {
+            'text-summary': null, // to show summary in console
+            json: './coverage/report.json',
+            html: './coverage'
+        },
         
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: false,
         browsers: ['PhantomJS'],
-        singleRun: true
+        singleRun: true,
     };
     
     config.set(_config);

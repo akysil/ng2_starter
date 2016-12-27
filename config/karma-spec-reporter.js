@@ -1,5 +1,5 @@
 module.exports = {
-    suppressPassed: true,
+    suppressPassed: false,
     suppressSkipped: false,
     suppressFailed: false,
     suppressErrorSummary: true,
