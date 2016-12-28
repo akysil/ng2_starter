@@ -1,5 +1,8 @@
-node_modules
-.idea
-dist
-coverage
+/node_modules
+/.idea
+/coverage
+/aot
+/dist
 npm-debug.log
+/src/**/*.js
+/src/**/*.js.map

@@ -36,7 +36,7 @@ module.exports = {
         postLoaders: [
             {
                 test: /\.ts$/,
-                include: helpers.root('src/app') + '/**/*.ts',
+                include: helpers.root('src/app'),
                 loader: 'istanbul-instrumenter-loader',
                 exclude: [/\.(e2e|spec)\.ts$/]
             }
