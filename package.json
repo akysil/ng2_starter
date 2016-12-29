@@ -1,7 +1,7 @@
 {
-  "name": "ng2aot",
+  "name": "ng2_starter",
   "version": "0.0.5",
-  "description": "ng2 + aot bulder + karma and protractor testers",
+  "description": "ng2 + aot builder + karma and protractor as testers",
   "scripts": {
     "build": "npm run clean && npm run ngc && npm run rollup && cp src/index.html dist/index.html",
     "clean": "rimraf dist",
@@ -20,7 +20,7 @@
     "rollup": "node_modules/.bin/rollup"
   },
   "author": "Alex Kysil",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@angular/common": "~2.4.1",
     "@angular/compiler": "~2.4.1",
