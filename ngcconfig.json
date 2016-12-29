@@ -13,7 +13,7 @@
     
     "files": [
         "src/app/app.module.ts",
-        "src/main.aot.ts"
+        "src/main-prod.ts"
     ],
     
     "angularCompilerOptions": {

@@ -5,8 +5,6 @@ var helpers = require('./helpers');
 
 module.exports = {
     entry: {
-        'polyfills': './src/polyfills.ts',
-        'vendors': './src/vendors.ts',
         'app': './src/main.ts'
     },
     
@@ -38,7 +36,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 // excludes css within app directory
-                exclude: helpers.root('src', 'app'),
+                exclude: helpers.path('src', 'app'),
                 // moves styles to separate bundle
                 loader: ExtractTextPlugin.extract(
                     // adds CSS to the DOM by injecting a <style> tag
@@ -50,22 +48,35 @@ module.exports = {
             {
                 test: /\.css$/,
                 // includes component-scoped styles
-                include: helpers.root('src', 'app'),
+                include: helpers.path('src', 'app'),
                 // loads css as string
                 loader: 'raw'
             }
         ]
     },
     
+    devtool: 'cheap-module-eval-source-map',
+    
+    output: {
+        path: helpers.path('dist'),
+        publicPath: 'http://localhost:8080/',
+        filename: '[name].js',
+        chunkFilename: '[id].chunk.js'
+    },
+    
     plugins: [
-        // separate the code by chunks, removes duplicated code
-        new webpack.optimize.CommonsChunkPlugin({
-            name: ['app', 'vendors', 'polyfills']
-        }),
+        // extract css from js (prepares them for HtmlWebpackPlugin)
+        new ExtractTextPlugin('[name].css'),
         
         // inject scripts and styles in html
         new HtmlWebpackPlugin({
-            template: 'src/index.html'
+            template: 'src/index.html',
+            inject: false
         })
-    ]
+    ],
+    
+    devServer: {
+        historyApiFallback: true,
+        stats: 'minimal'
+    }
 };

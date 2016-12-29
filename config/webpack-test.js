@@ -24,19 +24,19 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                exclude: helpers.root('src', 'app'),
+                exclude: helpers.path('src', 'app'),
                 loader: 'null'
             },
             {
                 test: /\.css$/,
-                include: helpers.root('src', 'app'),
+                include: helpers.path('src', 'app'),
                 loader: 'raw'
             }
         ],
         postLoaders: [
             {
                 test: /\.ts$/,
-                include: helpers.root('src/app'),
+                include: helpers.path('src/app'),
                 loader: 'istanbul-instrumenter-loader',
                 exclude: [/\.(e2e|spec)\.ts$/]
             }

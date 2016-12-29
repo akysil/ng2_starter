@@ -1,4 +1,4 @@
-var webpackConfig = require('./webpack.test');
+var webpackConfig = require('./webpack-test');
 var karmaSpecReporterConfig = require('./karma-spec-reporter');
 
 module.exports = function(config) {
