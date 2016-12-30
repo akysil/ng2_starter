@@ -32,7 +32,8 @@ module.exports = function(config) {
         reporters: ['karmaSimpleReporter', 'coverage', 'remap-coverage'],
         specReporter: karmaSpecReporterConfig,
         coverageReporter: {
-            type: 'in-memory'
+            type: 'in-memory',
+            includeAllSources: false
         },
         remapCoverageReporter: {
             'text-summary': null, // to show summary in console
