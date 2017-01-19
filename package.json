@@ -1,6 +1,6 @@
 {
     "name": "ng2_starter",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "ng2 + aot builder + karma and protractor as testers",
     "scripts": {
         "clean": "rimraf dist",
@@ -42,7 +42,7 @@
         "@types/karma": "^0.13.33",
         "@types/node": "^6.0.45",
         "angular2-template-loader": "^0.4.0",
-        "awesome-typescript-loader": "^2.2.4",
+        "awesome-typescript-loader": "^3.0.0-beta.18",
         "css-loader": "^0.23.1",
         "core-js": "^2.4.1",
         "extract-text-webpack-plugin": "^1.0.1",
@@ -73,7 +73,7 @@
         "rollup-plugin-uglify": "^1.0.1",
         "style-loader": "^0.13.1",
         "ts-node": "^1.7.2",
-        "typescript": "~2.0.10",
+        "typescript": "^2.1.4",
         "webpack": "^1.13.0",
         "webpack-dev-server": "^1.14.1",
         "webpack-merge": "^0.14.0"
