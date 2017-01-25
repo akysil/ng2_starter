@@ -1,6 +1,6 @@
 {
     "name": "ng2_starter",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "ng2 + aot builder + karma and protractor as testers",
     "scripts": {
         "clean": "rimraf dist && rimraf aot",
