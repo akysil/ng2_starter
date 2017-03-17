@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import * as _ from 'lodash';
 
 @Component({
-	selector: 'app',
-	templateUrl: 'app.component.html',
-	styleUrls: ['app.component.scss']
+    selector: 'app',
+    templateUrl: 'app.component.html',
+    styleUrls: ['app.component.scss']
 })
 export class AppComponent {
-	name = 'Test';
+    
+    lodash() {
+        return _.name;
+    }
 }
