@@ -18,8 +18,4 @@ describe('AppComponent', function () {
     }));
     
     it('should create component', () => expect(component).toBeDefined());
-    
-    it('should return lodash name', () => {
-        expect(component.lodash()).toBe('lodash');
-    });
 });

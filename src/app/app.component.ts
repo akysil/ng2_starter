@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import * as _ from 'lodash';
+import _u from './app.utility.service'
 
 @Component({
     selector: 'app',
@@ -8,7 +8,7 @@ import * as _ from 'lodash';
 })
 export class AppComponent {
     
-    lodash() {
-        return _.name;
+    constructor() {
+        console.dir(_u.name);
     }
 }
