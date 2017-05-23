@@ -1,6 +1,6 @@
 {
   "name": "ng2_starter",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "ng2 + aot builder + karma and protractor as testers",
   "scripts": {
     "clean": "rimraf aot && rimraf coverage && rimraf src/**/*.js && rimraf src/**/*.map && rimraf src/**/*.css",
@@ -48,7 +48,7 @@
     "@types/jasmine": "^2.5.47",
     "@types/karma": "^0.13.35",
     "@types/lodash": "^4.14.62",
-    "@types/node": "^6.0.68",
+    "@types/node": "^7.0.22",
     "angular2-template-loader": "^0.4.0",
     "awesome-typescript-loader": "^3.1.2",
     "browser-sync": "^2.18.6",
